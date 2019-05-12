@@ -15,8 +15,8 @@ import java.awt.Color;
  */
 public class Vacas extends becker.robots.Robot{
 
-private double Temp;
-private double Frec;
+private int Temp;
+private int Frec;
 private boolean Gestacion;
 private int lote;
 private double leche;
@@ -27,7 +27,7 @@ private int tiempo;
         super(city, i, i1, drctn);
         this.setColor(Color.BLACK);
         this.Frec=70;
-        this.Temp=38.5;
+        this.Temp=38;
         this.Gestacion=false;
         this.lote=0;
             this.leche=0;
@@ -46,7 +46,7 @@ private int tiempo;
         return Temp;
     }
 
-    public void setTemp(double Temp) {
+    public void setTemp(int Temp) {
         this.Temp = Temp;
     }
 
@@ -54,7 +54,7 @@ private int tiempo;
         return Frec;
     }
 
-    public void setFrec(double Frec) {
+    public void setFrec(int Frec) {
         this.Frec = Frec;
     }
 

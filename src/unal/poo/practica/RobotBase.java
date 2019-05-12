@@ -31,36 +31,42 @@ public class RobotBase
     for(int i=0;i<1000000;i++){
 
        for(int s=1;s<=c.getLote1();s++){
-        c.getCorral().get(s).setFrec(r.nextDouble()*100+40);
-        c.getCorral().get(s).setTemp(r.nextDouble()*45+30);
+        c.getCorral().get(s).setFrec(r.nextInt(100));
+        c.getCorral().get(s).setTemp(r.nextInt(50));
         if(c.getCorral().get(s).getGestacion()==true){
          c.getCorral().get(s).setTiempo(c.getCorral().get(s).getTiempo()+1);
         }
         if(c.getCorral().get(s).getTiempo()==10){
-            c.registrarVaca(objetos,c.getLote1()+1);
+            c.registrarVaca(objetos, 1);
+            c.getCorral().get(s).setTiempo(0);
+             c.getCorral().get(s).setGestacion(false);
         }
         c.getCorral().get(s).cambiarColor();
         
                 }
        for(int s=11;s<=c.getLote2()+10;s++){
-        c.getCorral().get(s).setFrec(r.nextDouble()*100+50);
-        c.getCorral().get(s).setTemp(r.nextDouble()*45+30);
+        c.getCorral().get(s).setFrec(r.nextInt(100));
+        c.getCorral().get(s).setTemp(r.nextInt(50));
          if(c.getCorral().get(s).getGestacion()==true){
          c.getCorral().get(s).setTiempo(c.getCorral().get(s).getTiempo()+1);
         }
         if(c.getCorral().get(s).getTiempo()==10){
-            c.registrarVaca(objetos,11+c.getLote2());
+            c.registrarVaca(objetos,2);
+            c.getCorral().get(s).setTiempo(0);
+             c.getCorral().get(s).setGestacion(false);
         }
         c.getCorral().get(s).cambiarColor();
                 }
        for(int s=21;s<=c.getLote3()+20;s++){
-        c.getCorral().get(s).setFrec(r.nextDouble()*100+50);
-        c.getCorral().get(s).setTemp(r.nextDouble()*45+30);
+        c.getCorral().get(s).setFrec(r.nextInt(100));
+        c.getCorral().get(s).setTemp(r.nextInt(50));
         if(c.getCorral().get(s).getGestacion()==true){
          c.getCorral().get(s).setTiempo(c.getCorral().get(s).getTiempo()+1);
         }
         if(c.getCorral().get(s).getTiempo()==10){
-            c.registrarVaca(objetos,11+c.getLote2());
+            c.registrarVaca(objetos,3);
+            c.getCorral().get(s).setTiempo(0);
+             c.getCorral().get(s).setGestacion(false);
         }
         c.getCorral().get(s).cambiarColor();
                 }
@@ -108,7 +114,7 @@ public class RobotBase
     }
         
         
-        esperar(15);
+        esperar(5);
        
 }
     

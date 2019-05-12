@@ -365,7 +365,7 @@ if( this.corral.get(ID).getAvenue()<5){
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
              corral.get(ID).cambiarColor();
   }
@@ -388,7 +388,7 @@ else{
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
       corral.get(ID).cambiarColor();
   }
@@ -429,7 +429,7 @@ if( this.corral.get(ID).getAvenue()<15){
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
       corral.get(ID).cambiarColor();
   }
@@ -453,7 +453,7 @@ else{
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
       corral.get(ID).cambiarColor();
   }
@@ -495,7 +495,7 @@ if( this.corral.get(ID).getAvenue()<25){
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
       corral.get(ID).cambiarColor();
   }
@@ -519,7 +519,7 @@ else{
  
   if (0<prob && prob<=70){
       this.corral.get(ID).setFrec(70);
-      this.corral.get(ID).setTemp(38.5);
+      this.corral.get(ID).setTemp(38);
       System.out.println("Tratamiento exitoso");
       corral.get(ID).cambiarColor();
   }
@@ -563,7 +563,7 @@ double w=0;
     for(int s=1;s<=this.getLote1();s++){
         w=w+this.corral.get(s).getLeche();
 }
-    for(int s=21;s<=this.getLote3();s++){
+    for(int s=21;s<=this.getLote3()+20;s++){
         w=w+this.corral.get(s).getLeche();
 }
     System.out.println("Leche total:  "+w);
